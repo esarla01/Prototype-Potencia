@@ -1,0 +1,50 @@
+{
+  "name": "action-eslint",
+  "version": "2.1.2",
+  "description": "GitHub Action that runs ESLint for files changed in a Pull Request",
+  "author": "sibiraj-s",
+  "license": "MIT",
+  "private": "true",
+  "repository": "https://github.com/sibiraj-s/action-eslint.git",
+  "bugs": "https://github.com/sibiraj-s/action-eslint/issues",
+  "homepage": "https://github.com/sibiraj-s/action-eslint#readme",
+  "main": "lib/main.js",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "eslint",
+    "github-action",
+    "action-eslint",
+    "lint-changed-files",
+    "ci"
+  ],
+  "scripts": {
+    "lint": "eslint . --ext js,ts",
+    "build": "tsc",
+    "package": "ncc build --source-map",
+    "prepare": "is-ci || husky install"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^5.0.3",
+    "@react-native-material/core": "^1.3.7",
+    "expo-font": "^11.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@octokit/types": "^7.2.0",
+    "@types/node": "^18.7.15",
+    "@vercel/ncc": "^0.34.0",
+    "commitlint-config-non-conventional": "^1.0.1",
+    "eslint": "^8.23.0",
+    "eslint-config-pegasus": "^3.4.1",
+    "husky": "^8.0.1",
+    "ignore": "^5.2.0",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.0.3",
+    "typescript": "^4.8.2"
+  }
+}
